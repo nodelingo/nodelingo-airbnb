@@ -1,0 +1,184 @@
+.spacer {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+#filter-panel {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  z-index: 999;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+}
+
+#filter-panel > .well {
+  margin-bottom: 0;
+}
+
+
+#header-image {
+  -moz-box-shadow:    0px 1px 10px #000;
+  -webkit-box-shadow: 0px 1px 10px #000;
+  box-shadow:         0px 1px 10px #000;
+}
+
+#new-rental-btn {
+  position: relative;
+  float: right;
+  margin-right: 25px;
+  top: 0;
+  font-size: 14px;
+  color: #AAAAAA;
+}
+
+#filter-btn {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  top: 0;
+  font-size: 14px;
+  color: #AAAAAA;
+}
+
+.record-panel {
+  position: relative;
+  height: 250px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.record-panel img {
+  position: absolute;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  -moz-box-shadow:    1px 1px 5px 2px #ccc;
+  -webkit-box-shadow: 1px 1px 5px 2px #ccc;
+  box-shadow:         1px 1px 5px 2px #ccc;
+}
+
+.record-detail {
+  position: absolute;
+  opacity: .8;
+  width: 80%;
+  background-color: #000;
+}
+
+.record-detail h1 {
+  color: #FFF;
+  line-height: 1.25;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding-left: 15px;
+  margin: 0;
+}
+
+.record-detail h2 {
+  color: #AAA;
+  line-height: 1.25;
+  font-size: 12px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+
+#submit, #add-rental-btn {
+  margin: 0;
+  float: right;
+}
+
+#overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #333333;
+  opacity: .8;
+}
+
+/* Bootstrap overrides */
+
+/* Make the record detail modal a bit taller. */
+.modal-body {
+  max-height: 500px;
+}
+
+.modal.fade {
+  top: 10%;
+  -webkit-transition: opacity 0.1s linear, top 0.1s ease-out;
+     -moz-transition: opacity 0.1s linear, top 0.1s ease-out;
+       -o-transition: opacity 0.1s linear, top 0.1s ease-out;
+          transition: opacity 0.1s linear, top 0.1s ease-out;
+}
+
+.modal.fade.in {
+  top: 10%;
+}
+
+/* Make our records appear less skinny on iPad-sized viewports. */
+@media (min-width: 768px) and (max-width: 979px) {
+  .record-panel {
+    height: 225px;
+  }
+}
+
+/* Shrink the container width on mobile. */
+@media (min-width: 450px) and (max-width: 767px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Remove the top-bar gap on mobile-sized viewports. */
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .navbar-fixed-top {
+    margin-bottom: 0px;
+  }
+
+  .navbar .brand {
+    padding-left: 20px;
+  }
+}
+
+/* Note this tease will only work in Chrome / Safari. Other prefixes are needed for 
+   Firefox and IE but are omitted to save space. */
+@-webkit-keyframes tease {
+  0% {
+    -webkit-transform: scale3d(1.15,.1.15,1.15);
+    -webkit-animation-timing-function: ease-out;
+  }
+  
+  80% {
+    -webkit-transform: scale3d(1.05,1.05,1.05);
+    -webkit-animation-timing-function: ease-in;
+  }
+  
+  100% {
+    -webkit-transform: scale3d(1,1,1);
+    -webkit-animation-timing-function: ease-out;
+  }
+}
+
+.bounce-appear {
+  -webkit-animation-name: tease;
+  -webkit-animation-duration: 700ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-timing-function: ease-in;
+}

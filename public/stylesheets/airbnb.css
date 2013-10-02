@@ -3,11 +3,46 @@
   margin-bottom: 7px;
 }
 
+.main-bar {
+  position: fixed;
+  width: 100%;
+  background-color: #000;
+  z-index: 900;
+}
+
+.navbar-inner > button {
+  margin-top: 4px;
+}
+
+#new-rental-btn {
+  position: relative;
+  float: right;
+  margin-right: 25px;
+  top: 0;
+  color: #AAAAAA;
+}
+
+#header-image {
+  -moz-box-shadow:    0px 1px 10px #000;
+  -webkit-box-shadow: 0px 1px 10px #000;
+  box-shadow:         0px 1px 10px #000;
+  margin-bottom: 25px;
+}
+
+
+#filter-btn {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  top: 0;
+  color: #AAAAAA;
+}
+
 #filter-panel {
   position: absolute;
   right: 0;
   top: 40px;
-  z-index: 999;
+  z-index: 800;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   transition: all .5s;
@@ -17,29 +52,8 @@
   margin-bottom: 0;
 }
 
-
-#header-image {
-  -moz-box-shadow:    0px 1px 10px #000;
-  -webkit-box-shadow: 0px 1px 10px #000;
-  box-shadow:         0px 1px 10px #000;
-}
-
-#new-rental-btn {
-  position: relative;
-  float: right;
-  margin-right: 25px;
-  top: 0;
-  font-size: 14px;
-  color: #AAAAAA;
-}
-
-#filter-btn {
-  position: relative;
-  float: right;
-  margin-right: 10px;
-  top: 0;
-  font-size: 14px;
-  color: #AAAAAA;
+#rental-image {
+  margin-top: 35px;
 }
 
 .record-panel {
@@ -59,29 +73,52 @@
   box-shadow:         1px 1px 5px 2px #ccc;
 }
 
-.record-detail {
+.record-card {
   position: absolute;
   opacity: .8;
-  width: 80%;
+  width: 100%;
   background-color: #000;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.record-detail h1 {
+.record-card h1 {
   color: #FFF;
   line-height: 1.25;
-  font-size: 14px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin-top: 10px;
   padding-left: 15px;
-  margin: 0;
 }
 
-.record-detail h2 {
+.record-card h2 {
   color: #AAA;
-  line-height: 1.25;
-  font-size: 12px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  padding-left: 15px;
+  line-height: 1;
+  font-size: 16px;
   margin-bottom: 5px;
+  padding-left: 15px;
+}
+
+.record-card h3 {
+  color: #AAA;
+  line-height: 1;
+  font-size: 10px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+}
+
+.modal-header h1 {
+  font-size: 16px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 10px;
+}
+
+.modal-header h2 {
+  font-size: 16px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 10px;
+}
+
+.modal-body h1 {
+  font-size: 16px;
 }
 
 #submit, #add-rental-btn {
@@ -137,21 +174,31 @@
     padding-left: 0;
     padding-right: 0;
   }
-}
 
-/* Remove the top-bar gap on mobile-sized viewports. */
-@media (max-width: 979px) {
-  body {
-    padding-top: 0;
-    padding-bottom: 0;
+  .modal-header h1 {
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 20px;
   }
 
-  .navbar-fixed-top {
-    margin-bottom: 0px;
+  .modal-header h2 {
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 0px;
   }
 
-  .navbar .brand {
-    padding-left: 20px;
+  .modal-body h1 {
+    font-size: 12px;
+    line-height: 0;
+    margin-top: 25px;
+  }
+
+  .modal-body p {
+    font-size: 12px;
+  }
+
+  #new-rental-btn {
+    margin-right: 0;
   }
 }
 

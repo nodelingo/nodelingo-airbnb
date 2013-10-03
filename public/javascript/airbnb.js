@@ -1,4 +1,4 @@
-/*
+
 (function() {
   var recordsMap = {};
 
@@ -27,13 +27,6 @@
       // Handle filter panel button.
       $('#filter-btn').on('click', function() {
         methods.showFilterPanel(!filterPanelShowing);
-      });
-
-      // Handle filter panel visibility.
-      filterPanel.on('webkitTransitionEnd mozTransitionEnd msTransitionEnd transitionend', function() {
-        if (!filterPanelShowing) {
-          filterPanel.hide();  
-        }
       });
 
       // Handle add new record button.
@@ -77,7 +70,7 @@
     },
 
     bookRental: function() {
-      var id = displayedRecord.id;
+      // TODO(andytzou): To be implemented.
     },
 
     showFilterPanel: function(showPanel) {
@@ -159,4 +152,4 @@
 
   window.AirBnb = methods;
 })();
-*/
+

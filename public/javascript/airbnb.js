@@ -110,7 +110,6 @@
         success: function(records) {
           var mainContent = $('#main-content');
           var currentRecordRow = null;
-          var targetDiv = $('<div>');
 
           var children = $('#main-content').children().not('#filter-panel');
           for (var i = 0; i < children.length; i++) {

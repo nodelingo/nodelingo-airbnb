@@ -49,7 +49,7 @@
 
     </div> 
 
-    <!-- Basic template. -->
+    <!-- Basic template -->
     <script id="card-template" type="text/x-handlebars-template">
       <div class="{{span}}">
         <img src="{{url}}" />
@@ -59,6 +59,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="/javascript/handlebars.js"></script>
 
+    <!-- Templates warmup -->
     <script>
       var source = $('#card-template').html();
       var template = Handlebars.compile(source);
@@ -69,7 +70,11 @@
           url: 'images/img' + i + '.jpg'
         }));
       }
+    </script>
 
+    <!-- Ajax warmup -->
+    <script>
+      
     </script>
      
   </body>

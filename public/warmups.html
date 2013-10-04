@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AirBnB Product Driven Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="AirBnB Product Driven Learning by NodeLingo">
+    <meta name="author" content="NodeLingo 2013">
+    
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Bootstrap grid system -->
+    <div class="container">
+      <div id="first-row" class="row-fluid" style="margin-bottom: 15px;">
+        <!-- Cards here -->
+      </div>
+
+      <!-- Assorted widgets here -->
+
+      <div id="widget-row" class="row-fluid">
+        <div class="well span12"></div>
+      </div>
+
+      <div class="row-fluid">
+
+        <div class="span12">
+          <input type="text" placeholder="Max Price" />
+          <input type="text" placeholder="Max Price" />
+
+          <select id="query-type" class="span2">
+            <option value="">All types</option>
+            <option value="Entire home">Entire home</option>
+            <option value="Private room">Private room</option>
+            <option value="Shared room">Shared room</option>
+          </select> 
+        </div>
+
+      </div>
+
+      <div class="row-fluid">
+        <div class="span12">
+          <button class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+
+    </div> 
+
+    <!-- Basic template. -->
+    <script id="card-template" type="text/x-handlebars-template">
+      <div class="{{span}}">
+        <img src="{{url}}" />
+      </div>
+    </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="/javascript/handlebars.js"></script>
+
+    <script>
+      var source = $('#card-template').html();
+      var template = Handlebars.compile(source);
+
+      for (var i = 1; i < 5; i++) {
+        $('#first-row').append(template({
+          span: 'span3',
+          url: 'images/img' + i + '.jpg'
+        }));
+      }
+
+    </script>
+     
+  </body>
+</html>

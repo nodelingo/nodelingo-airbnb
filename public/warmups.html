@@ -26,10 +26,10 @@
       <div class="row-fluid">
 
         <div class="span12">
-          <input type="text" placeholder="Max Price" />
-          <input type="text" placeholder="Max Price" />
+          <input type="text" placeholder="Max Price" class="span4" />
+          <input type="text" placeholder="Max Price" class="span4" />
 
-          <select id="query-type" class="span2">
+          <select id="query-type" class="span4">
             <option value="">All types</option>
             <option value="Entire home">Entire home</option>
             <option value="Private room">Private room</option>
@@ -56,26 +56,33 @@
 
     <!-- Templates warmup -->
     <script>
-      var source = $('#card-template').html();
-      var template = Handlebars.compile(source);
-
-      for (var i = 1; i < 5; i++) {
-        $('#first-row').append(template({
-          span: 'span3',
-          url: 'images/img' + i + '.jpg'
-        }));
-      }
+      // var source = $('#card-template').html();
+      // var template = Handlebars.compile(source);
+      
+      // for (var i = 1; i < 5; i++) {
+      //   var html = template({
+      //     span: 'span3',
+      //     url: 'images/img' + i + '.jpg'
+      //   });
+      //   $('#first-row').append(html);
+      // }
     </script>
 
-    <!-- Ajax warmup -->
+    <!-- Ajax + Templates warmup -->
     <script>
-      var params = {
-        url: 'http://xanadu.logicparty.org:4000/rentals',
-        dataType: 'jsonp',
-        success: function(records) {
-          console.log(records);
-        }
-      };
+      // var host = 'http://xanadu.logicparty.org:4000';
+      // var params = {
+      //   url: host + '/rentals',
+      //   dataType: 'jsonp',
+      //   success: function(records) {
+      //     for (var i = 0; i < 4; i++) {
+      //       $('#first-row').append(template({
+      //         span: 'span3',
+      //         url: host + records[i].image_urls[0]
+      //       }));
+      //     };
+      //   }
+      // };
       // jQuery.ajax(params);
     </script>
      

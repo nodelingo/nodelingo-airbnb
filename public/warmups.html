@@ -9,6 +9,9 @@
     
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="/javascript/handlebars.js"></script>
   </head>
 
   <body>
@@ -20,11 +23,6 @@
       </div>
 
       <!-- Assorted widgets here -->
-
-      <div id="widget-row" class="row-fluid">
-        <div class="well span12"></div>
-      </div>
-
       <div class="row-fluid">
 
         <div class="span12">
@@ -56,9 +54,6 @@
       </div>
     </script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="/javascript/handlebars.js"></script>
-
     <!-- Templates warmup -->
     <script>
       var source = $('#card-template').html();
@@ -74,7 +69,14 @@
 
     <!-- Ajax warmup -->
     <script>
-      
+      var params = {
+        url: 'http://xanadu.logicparty.org:4000/rentals',
+        dataType: 'jsonp',
+        success: function(records) {
+          console.log(records);
+        }
+      };
+      // jQuery.ajax(params);
     </script>
      
   </body>

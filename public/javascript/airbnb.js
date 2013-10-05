@@ -111,7 +111,7 @@
           var mainContent = $('#main-content');
           var currentRecordRow = null;
 
-          var children = $('#main-content').children().not('#filter-panel');
+          var children = $('#main-content').children();
           for (var i = 0; i < children.length; i++) {
             children[i].remove();
           }

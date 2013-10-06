@@ -140,7 +140,7 @@
 
 /* Make the record detail modal a bit taller. */
 .modal-body {
-  max-height: 500px;
+  max-height: 625px;
 }
 
 .modal.fade {
@@ -153,6 +153,10 @@
 
 .modal.fade.in {
   top: 10%;
+}
+
+.datepicker {
+  z-index: 2000;
 }
 
 /* Make our records appear less skinny on iPad-sized viewports. */

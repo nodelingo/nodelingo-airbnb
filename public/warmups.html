@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>AirBnB Product Driven Learning</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="/javascript/handlebars.js"></script>
   </head>
 
@@ -15,8 +17,97 @@
 
     <!-- Bootstrap grid system -->
     <div class="container">
-    
+      <!-- Draw four images -->
+      <div id="images" class="row" style="margin-bottom: 15px">
+        
+      </div>
+
+      <!-- Draw some widgets -->
+      <div class="row">
+        <div class="span12">
+          <input class="span4" placeholder="Max Price" type="text" />
+          <input class="span4" placeholder="Room Size" type="text" />
+          <select class="span4">
+            <option>Dog</option>
+            <option>Cat</option>
+            <option>Bear</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <button class="btn btn-primary span6">Submit</button>
+      </div>
     </div>
+
+
+
+
+
+
+    <!-- Define our template -->
+    <script id="my-template" type="text/handlebars-template">
+      <img class="{{span}}" src="{{url}}" />
+    </script>
+
+    <!-- Basic template + JQuery -->
+    <script>
+      // Compile our template (only done once).
+      // var source = $('#my-template').html();
+      // var template = Handlebars.compile(source);
+
+      // for (var i = 10; i < 14; i++) {
+      //   var html = template({
+      //     span: 'span3',
+      //     url: 'images/img' + i + '.jpg'
+      //   });
+      
+      //   $('#images').append(html);
+      // }
+
+    </script>
+
+    <script>
+      // Compile our template (only done once).
+      var source = $('#my-template').html();
+      var template = Handlebars.compile(source);
+
+      // Ajax + Templates warmup.
+      var host = 'http://xanadu.logicparty.org:4000';
+      $.ajax({
+        url: host + '/rentals',
+        method: 'GET',
+        dataType: 'jsonp',
+        success: function(data) {
+          // Grab the first four rentals.
+          for (var i = 10; i < 14; i++) {
+            var currentRental = data[i];
+            var url = host + currentRental.image_urls[0];
+            
+            var html = template({
+              span: 'span3',
+              url: url
+            });
+
+            $('#images').append(html);
+          };
+        }
+      });
+
+    </script>
+
+
+
      
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+

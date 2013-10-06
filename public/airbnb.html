@@ -15,7 +15,7 @@
 
   <body>
 
-    <!-- NavBar header including Filter and New Rental buttons.
+    <!-- NavBar header including Filter and New Rental buttons. -->
     <div class="main-bar navbar-inverse">
       <div class="navbar-inner">
 
@@ -25,17 +25,15 @@
 
       </div>
     </div>
-    -->
 
-    <!-- NYC header image.
+    <!-- NYC header image. -->
     <div class="row-fluid">
       <img id="header-image" src="/images/nyc.jpg" class="span12" />
     </div>
-    -->
-
+    
     <div class="container">
     
-      <!-- Filter panel to query for rentals.
+      <!-- Filter panel to query for rentals. -->
       <div id="filter-panel" class="span4">
         <div class="well">
           <div class="spacer"></div>
@@ -79,16 +77,15 @@
           
         </div>
       </div> 
-      -->
 
       <div id="main-content" class="row-fluid">
         <!-- Render records here -->
       </div> 
 
-      <!-- Record card template.
+      <!-- Record card template. -->
       <script id="record-template" type="text/x-handlebars-template">
         <div class="span4">
-          <div id="{{id}}"class="record-panel bounce-appear">
+          <div id="{{id}}" class="record-panel bounce-appear">
             <img src="{{image}}">
             <div class="record-card">
               <h1>{{title}}</h1>
@@ -98,9 +95,8 @@
           </div>
         </div>
       </script>
-      -->
 
-      <!-- Record detail template.
+      <!-- Record detail template. -->
       <script id="record-detail-template" type="text/x-handlebars-template">
         <div class="modal fade hide" id="myModal">
           <div class="modal-dialog">
@@ -115,14 +111,29 @@
                 <img src="{{image}}">
                 <h1>{{title}}</h1>
                 <p>Lorem ipsum dolar. Lorem ipsum dolar. Lorem ipsum dolar. Lorem ipsum dolar. Lorem ipsum dolar. Lorem ipsum dolar. Lorem ipsum dolar. Lorem ipsum dolar. Lorem ipsum dolar.</p>
+
+              <div class="row-fluid">
+                <div id="datepicker-bookstart" class="input-append date span4" data-date="12-02-2012" data-date-format="mm-dd-yyyy">
+                  <input id="booking-bookstart" class="span10" type="text" value="" readonly>
+                  <span id="addon-bookstart" class="add-on"><i class="icon-th"></i></span>
+                </div>
+
+                <div id="datepicker-bookend" class="input-append date span4" data-date="12-02-2012" data-date-format="mm-dd-yyyy">
+                  <input id="booking-bookend" class="span10" type="text" value="" readonly>
+                  <span id="addon-bookend" class="add-on"><i class="icon-th"></i></span>
+                </div>
+
+                <button id="book-btn" class="btn btn-success span4">Book</button>
+              </div>
+
               </div>
             </div>
           </div>
         </div>
       </script>
-      -->
       
-    <!-- Add record modal
+      
+    <!-- Add record modal -->
     <div class="modal fade hide" id="addRentalModal">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -177,8 +188,7 @@
         </div>
       </div>
     </div>
-    --> 
-
+    
     <footer>
       <p>&copy; NodeLingo 2013</p>
     </footer>
@@ -186,10 +196,9 @@
     <!--/.fluid-container-->
     </div>
     
-    <!-- Container that will hold all modals plus an overlay tint screen.
+    <!-- Container that will hold all modals plus an overlay tint screen. -->
     <div id="modal-container"></div>
     <div id="overlay"></div>
-    -->
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="/bootstrap/js/bootstrap.js"></script>
@@ -199,7 +208,7 @@
     <script src="/javascript/airbnb.js"></script>
     
     <script>
-      // AirBnb.init();
+      AirBnb.init();
     </script>
   </body>
 </html>

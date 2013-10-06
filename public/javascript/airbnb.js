@@ -165,8 +165,7 @@
             methods.drawRecordDetail(recordsMap[e.currentTarget.id]);
           });
 
-
-          overlay.fadeOut(1000);
+          overlay.hide();
         }
       };
 

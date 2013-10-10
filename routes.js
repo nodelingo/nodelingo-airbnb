@@ -1,5 +1,5 @@
-var Root = require('./controllers').Root;
+var RootController = require('./controllers').RootController;
 
 module.exports = function(app) {
-  app.get('/', Root.index);
+  app.get('/', RootController.index);
 }

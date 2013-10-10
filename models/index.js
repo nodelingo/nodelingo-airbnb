@@ -1,9 +1,10 @@
 var fs = require('fs')
   , path = require('path')
+  , config = require('../config')
   , mongoose = require('mongoose');
 
-module.exports = function(app) {
-  mongoose.connect(app.get('mongodb_uri'));
+module.exports = function() {
+  mongoose.connect(config.mongodb.uri);
 
   fs.readdirSync(__dirname).forEach(function(file) {
     if (file.indexOf('.js') == (file.length - 3)) {

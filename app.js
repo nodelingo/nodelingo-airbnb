@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 require('./routes')(app)
 
-require('./models')(app)
+require('./models')()
 
 // development only
 if ('development' == app.get('env')) {

@@ -22,6 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 require('./routes')(app)
 
+require('./models')(app)
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());

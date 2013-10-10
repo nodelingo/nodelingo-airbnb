@@ -20,9 +20,9 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-require('./routes')(app)
-
 require('./models')()
+
+require('./routes')(app)
 
 // development only
 if ('development' == app.get('env')) {

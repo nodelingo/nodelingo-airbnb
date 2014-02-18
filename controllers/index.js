@@ -1,1 +1,1 @@
-exports.Root = require('./root');
+exports.RootController = require('./root');

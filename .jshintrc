@@ -8,7 +8,7 @@
   "newcap": true,
   "noarg": true,
   "nonew": true,
-  "plusplus": true,
+  "plusplus": false,
   "quotmark": false,
   "undef": true,
   "unused": true,

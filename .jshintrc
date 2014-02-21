@@ -32,6 +32,8 @@
     "$": true,
     "define": true,
     "requirejs": true,
-    "log": true
+    "log": true,
+    "Handlebars": true,
+    "jQuery": true
   }
 }

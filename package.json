@@ -9,6 +9,7 @@
     "express": "3.2.5",
     "jade": "*",
     "mongoose": "~3.6.20",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "imageinfo": "~1.0.4"
   }
 }

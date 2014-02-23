@@ -22,8 +22,6 @@ app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
-require('./models')()
-
 require('./routes')(app)
 
 // development only

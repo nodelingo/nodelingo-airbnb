@@ -24,7 +24,7 @@ var Rentals = new Schema({
   location: String,
   images: [Buffer],
   bookings: [Bookings]
-}, {collection: 'places'})
+})
 
 Rentals.virtual('image_urls')
   .get(function() {
